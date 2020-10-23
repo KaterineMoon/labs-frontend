@@ -1,4 +1,5 @@
 <template>
+    
   <div class="row">
       <h1>Profesor</h1>
   <div>
