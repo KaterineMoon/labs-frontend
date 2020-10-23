@@ -31,6 +31,11 @@ export default new Router({
           path: "nuevo-rol",
           name: "add-role",
           component: AddRole
+        },
+        {
+          path: "crear-curso",
+          name: "create-course",
+          component: CreateCourse
         }
       ]
     }
