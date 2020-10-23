@@ -42,9 +42,10 @@ export default new Router({
         {
           path: "crear-curso",
           name: "create-course",
-          component: CreateCourse,
+          component: CreateCourse
         },
-      ],
-    },
-  ],
-});
+      ]
+    }
+  ]
+})
+
