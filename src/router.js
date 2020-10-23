@@ -1,26 +1,27 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from "vue";
+import Router from "vue-router";
 import SignUp from "./views/SignUp";
 import Login from "./views/Login";
 import Home from "./views/Home";
 import AddRole from "./components/AddRole";
+import ListRoles from "./components/ListRoles";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
       path: "/registro",
       name: "signup",
-      component: SignUp
+      component: SignUp,
     },
     {
       path: "/",
       alias: "/iniciar-sesion",
       name: "login",
-      component: Login
+      component: Login,
     },
     {
       path: "/principal",
@@ -30,9 +31,14 @@ export default new Router({
         {
           path: "nuevo-rol",
           name: "add-role",
-          component: AddRole
-        }
-      ]
-    }
-  ]
-})
+          component: AddRole,
+        },
+        {
+          path: "roles",
+          name: "list-roles",
+          component: ListRoles,
+        },
+      ],
+    },
+  ],
+});
