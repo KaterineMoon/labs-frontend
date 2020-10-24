@@ -62,8 +62,6 @@ export default {
   },
   methods: {
     crearCurso(event) {
-      console.log(token);
-
       axios
         .post(this.$store.state.backURL + path, {
           courseName: this.name,
