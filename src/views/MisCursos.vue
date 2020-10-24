@@ -1,18 +1,22 @@
 <template>
 <div>
+  <h1>Mis cursos:</h1>
   <div v-for="course in courses" v-bind:key="course">
-    <h3>{{item.title}}</h3>
+    <h3 style="background-color: lightskyblue; margin-bottom: 0px">Curso: {{course.name}}</h3>
+    <h4 style="background-color: lightgreen">&nbsp; Rol: {{course.role.name}}</h4>
   </div>
 </div>
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
 name: "MisCursos",
   data() {
     return {
-      email: '',
-      courses: []
+      courses: [],
 
     }
   },
@@ -23,7 +27,7 @@ name: "MisCursos",
         .get(this.$store.state.backURL + coursePath,
             {
               params: {
-                access_token: getAuthenticationToken()
+                access_token: localStorage.getItem("token")
               }
             })
         .then((response) => {
@@ -32,7 +36,7 @@ name: "MisCursos",
           } else {
             let courseResponse = response.data;
 
-            postsResponse.forEach((item) => {
+            courseResponse.forEach((item) => {
               this.courses.push(item)
             });
           }
