@@ -63,7 +63,6 @@ export default {
       params:{access_token: localStorage.getItem("token-ingesoft")}
     }).then((response) =>{
       this.role = response.data
-      console.log(this.role);
     })
   },
 };

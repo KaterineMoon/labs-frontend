@@ -1,6 +1,5 @@
 <template>
-  <div class="row">
-    <h1>Profesor</h1>
+  <div class="row" style="margin:0 auto">
     <div>
       <form
         class="border border-primary rounded form-inline"

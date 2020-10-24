@@ -75,7 +75,7 @@
                     if( response.status !== 200 ){
                         alert( "Error en la autenticación" );
                     }else{
-                        localStorage.setItem( 'token', response.data.access_token );
+                        localStorage.setItem( 'token-ingesoft', response.data.access_token );
                         this.$router.push( {name: 'home'} )
                         //alert( "¡Autenticación Exitosa! El token se ha almacenado en el Local Storage" )
                     }
