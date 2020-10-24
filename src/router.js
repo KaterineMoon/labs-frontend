@@ -20,11 +20,6 @@ export default new Router({
       component: SignUp,
     },
     {
-      path: "/mis-cursos",
-      name: "mis-Cursos",
-      component: MisCursos
-    },
-    {
       path: "/",
       alias: "/iniciar-sesion",
       name: "login",
@@ -50,6 +45,11 @@ export default new Router({
           name: "create-course",
           component: CreateCourse
         },
+        {
+          path: "mis-cursos",
+          name: "mis-cursos",
+          component: MisCursos
+        }
       ]
     }
   ]

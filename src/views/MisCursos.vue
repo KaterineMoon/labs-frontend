@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="margin:0 auto">
   <h1>Mis cursos:</h1>
   <div v-for="course in courses" v-bind:key="course">
     <h3 style="background-color: lightskyblue; margin-bottom: 0px">Curso: {{course.name}}</h3>
@@ -27,7 +27,7 @@ name: "MisCursos",
         .get(this.$store.state.backURL + coursePath,
             {
               params: {
-                access_token: localStorage.getItem("token")
+                access_token: localStorage.getItem("token-ingesoft")
               }
             })
         .then((response) => {

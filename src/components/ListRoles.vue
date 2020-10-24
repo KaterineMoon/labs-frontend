@@ -20,7 +20,7 @@ export default {
   beforeCreate() {
     axios
       .get(this.$store.state.backURL + requestPath, {
-        params: { access_token: localStorage.getItem("token") },
+        params: { access_token: localStorage.getItem("token-ingesoft") },
       })
       .then((response) => {
         if (response.status !== 200) {
